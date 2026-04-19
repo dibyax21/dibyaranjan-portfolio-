@@ -26,7 +26,7 @@
 
     <!-- Background Canvas -->
     <canvas id="bg-canvas"></canvas>
-    
+
     <!-- Custom Cursor -->
     <div class="cursor-dot" id="cursor-dot"></div>
     <div class="cursor-outline" id="cursor-outline"></div>
@@ -447,6 +447,7 @@
 
     <!-- Scripts -->
     <script src="./js/script.js"></script>
+    
     <!-- Firebase SDKs -->
     <script type="module">
         // Import the functions you need from the SDKs you need
@@ -465,13 +466,9 @@
         };
 
         // Initialize Firebase
-        try {
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-            console.log("Firebase initialized successfully!");
-        } catch (error) {
-            console.error("Firebase initialization failed:", error);
-        }
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        console.log("Firebase initialized successfully!");
     </script>
 </body>
 

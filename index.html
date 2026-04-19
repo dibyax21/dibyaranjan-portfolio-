@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibyaranjan Nayak | AI & ML Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Dibyaranjan Nayak, an AI & Machine Learning Engineer specializing in building intelligent systems and smart AI assistants.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">Dibyaranjan<span class="dot">.</span></span>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content reveal active">
+                <p class="subtitle">👋 Welcome to my world</p>
+                <h1 class="title">I'm Dibyaranjan <br><span class="gradient-text typewrite" data-period="2000"
+                        data-type='[ "AI & ML Engineer.", "AIML Student.", "AI Builder." ]'></span></h1>
+                <p class="description">
+                    Building Intelligent Systems, Smart AI Assistants, and Real-World AI Solutions.
+                    <br><br>
+                    <span class="hero-info"><i class="fas fa-graduation-cap"></i> B.Tech AIML Student</span><br>
+                    <span class="hero-info"><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India</span><br>
+                    <span class="hero-info"><i class="fas fa-lightbulb"></i> Passionate about AI, Automation & Future
+                        Tech</span>
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Download Resume</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper reveal delay-1">
+                <div class="hero-image-glow"></div>
+                <img src="./assets/images/profile.jpg" alt="Dibyaranjan Nayak" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>About <span class="gradient-text">Me</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <h3>Passionate AI & ML Engineer</h3>
+                    <p>I am Dibyaranjan Nayak, a dedicated AI & Machine Learning student pursuing my B.Tech at GEC
+                        Autonomous College, Bhubaneswar (2024-2028).</p>
+                    <p>I specialize in <strong>Artificial Intelligence, Machine Learning, Computer Vision, and AI
+                            Automation</strong>. I have a deep passion for developing personal AI assistants and
+                        intelligent multi-agent systems.</p>
+
+                    <div class="specialization-list">
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> Smart Face Attendance System</div>
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> Personal AI Assistant</div>
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> AI Multi-Agent Systems</div>
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> AI Content Automation Tools</div>
+                    </div>
+
+                    <p>My goal is to become a top-tier AI Engineer and build impactful AI products used globally. 🌍</p>
+
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <h4 class="stat-number">10+</h4>
+                            <p class="stat-text">AI Projects</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4 class="stat-number">2</h4>
+                            <p class="stat-text">Internships</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4 class="stat-number">2028</h4>
+                            <p class="stat-text">Graduation Year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section glass-bg">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>My <span class="gradient-text">Skills</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal delay-1">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming</h3>
+                    <p>Python, JavaScript, HTML, CSS, SQL</p>
+                </div>
+                <div class="skill-card reveal delay-2">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & ML</h3>
+                    <p>Machine Learning, Deep Learning, Computer Vision, NLP, OpenCV, Face Recognition</p>
+                </div>
+                <div class="skill-card reveal delay-3">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools & Tech</h3>
+                    <p>Git & GitHub, VS Code, Google Sheets API, REST API, TensorFlow & PyTorch (Learning)</p>
+                </div>
+                <div class="skill-card reveal delay-4">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Responsive Design, UI/UX Design, Animations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-marquee reveal">
+                <div class="projects-track">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/images/project_1.png" alt="AI Assistant" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">AI & Automation</span>
+                            <h3 class="project-title">Personal AI Assistant</h3>
+                            <p class="project-desc">Voice-controlled assistant with system control features.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>AI APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/images/project_2.png" alt="Smart Face Attendance" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Computer Vision</span>
+                            <h3 class="project-title">Smart Face Attendance</h3>
+                            <p class="project-desc">Real-time system using face recognition and Liveness detection.</p>
+                            <div class="project-tags">
+                                <span>OpenCV</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/images/project_3.jpg" alt="Multimedia Hub" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Platform</span>
+                            <h3 class="project-title">Multimedia Hub</h3>
+                            <p class="project-desc">Comprehensive site with music/video players and auth.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder bg-gradient-1"></div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Multi-Agent AI</span>
+                            <h3 class="project-title">AI Agent Developer</h3>
+                            <p class="project-desc">A team of AI agents designed to automate coding tasks.</p>
+                            <div class="project-tags">
+                                <span>LLMs</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate for infinite scroll loop -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/images/project_1.png" alt="AI Assistant" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">AI & Automation</span>
+                            <h3 class="project-title">Personal AI Assistant</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/images/project_2.png" alt="Smart Face Attendance" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Computer Vision</span>
+                            <h3 class="project-title">Smart Face Attendance</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="experience section glass-bg">
+        <div class="container">
+            <div class="experience-grid">
+                <!-- Internships -->
+                <div class="reveal">
+                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                        <h2>Internship <span class="gradient-text">Experience</span></h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>AI Intern — Acmegrade</h3>
+                                <p class="timeline-date">Feb 2025 — March 2025</p>
+                                <p>Focused on AI & ML concepts, building practical projects and learning real-world
+                                    implementation strategies.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>AI Intern — InternPe</h3>
+                                <p class="timeline-date">June 2025 — July 2025</p>
+                                <p>Worked on machine learning projects, data analysis, and predictive model development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="reveal delay-2">
+                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                        <h2>My <span class="gradient-text">Education</span></h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>B.Tech — AI & Machine Learning</h3>
+                                <p class="timeline-date">2024 — 2028</p>
+                                <p><strong>GEC Autonomous College</strong>, Bhubaneswar. Deep diving into advanced AI
+                                    architectures and machine learning systems.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-title" style="text-align: left; margin-top: 50px; margin-bottom: 30px;">
+                        <h2>Languages <span class="gradient-text">& Achievements</span></h2>
+                    </div>
+                    <div class="languages-achievements">
+                        <div class="lang-list">
+                            <span>English</span> <span>Hindi</span> <span>Odia</span>
+                        </div>
+                        <ul class="achievement-list">
+                            <li><i class="fas fa-trophy"></i> Built Multiple AI Projects</li>
+                            <li><i class="fas fa-trophy"></i> Created Personal AI Assistant</li>
+                            <li><i class="fas fa-trophy"></i> Completed AI Internships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Certifications <span class="gradient-text">& Awards</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="certification-card reveal">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div class="cert-info">
+                    <h3>Deloitte Data Analytics Virtual Experience</h3>
+                    <p class="cert-issuer">Issued by Deloitte</p>
+                    <p class="cert-desc">Mastered Data Analysis, Visualization, Telemetry Data Processing, and Business
+                        Intelligence Insights using Excel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section glass-bg">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Get In <span class="gradient-text">Touch</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-container reveal">
+                <div class="contact-info">
+                    <h3>Let's build the future of AI together.</h3>
+                    <p>Open for collaborations, freelance AI projects, or interesting discussions about future
+                        technology.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>nayakdibyaranjan2006@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91 9692225288</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/dibyax21" target="_blank" class="social-link"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/dibya-ranjan-nayak-8b4493300" target="_blank"
+                            class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message <i
+                            class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <span class="logo-text">Dibyaranjan<span class="dot">.</span></span>
+            </div>
+            <p class="copyright">&copy; 2026 Dibyaranjan Nayak. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

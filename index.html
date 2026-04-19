@@ -31,6 +31,29 @@
     <div class="cursor-dot" id="cursor-dot"></div>
     <div class="cursor-outline" id="cursor-outline"></div>
 
+    <!-- Mobile-Only Landing Page -->
+    <section class="mobile-landing" id="mobile-home">
+        <div class="mobile-container">
+            <div class="mobile-profile reveal active">
+                <img src="./assets/images/profile.jpg" alt="Dibyaranjan Nayak">
+            </div>
+            <div class="mobile-content reveal active">
+                <p class="mobile-greeting">👋 Hello, I am</p>
+                <h1 class="mobile-name">Dibyaranjan <span class="gradient-text">Nayak</span></h1>
+                <p class="mobile-tagline">AI & Machine Learning Engineer</p>
+                <div class="mobile-quick-actions">
+                    <a href="#projects" class="mobile-action-btn"><i class="fas fa-code"></i> Projects</a>
+                    <a href="#contact" class="mobile-action-btn"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="#" class="mobile-action-btn"><i class="fas fa-file-alt"></i> Resume</a>
+                </div>
+                <div class="mobile-scroll-indicator">
+                    <span>Swipe to Explore</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Navigation -->
     <header class="header">
         <div class="logo">
@@ -38,7 +61,8 @@
         </div>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#home" class="nav-link desktop-only">Home</a></li>
+                <li><a href="#mobile-home" class="nav-link mobile-only">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -51,8 +75,8 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero section">
+    <!-- Hero Section (Desktop Only) -->
+    <section id="home" class="hero section desktop-only">
         <div class="hero-bg"></div>
         <div class="container hero-container">
             <div class="hero-content reveal active">

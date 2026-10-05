@@ -4,463 +4,911 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dibyaranjan Nayak | AI & ML Portfolio</title>
+    <title>Dibyaranjan Nayak — AI/ML Engineer | Portfolio</title>
     <meta name="description"
-        content="Portfolio of Dibyaranjan Nayak, an AI & Machine Learning Engineer specializing in building intelligent systems and smart AI assistants.">
+        content="Dibyaranjan Nayak is an AI/ML student at GEC Autonomous College, Bhubaneswar (2024–2028), building practical systems across Computer Vision, Multi-Agent Systems, and AI Automation.">
+    <meta name="keywords"
+        content="Dibyaranjan Nayak, AI ML Engineer, Computer Vision, Agentic AI, Swarm AI, Python, ExamGuard AI, GEC Autonomous College">
+    <meta name="author" content="Dibyaranjan Nayak">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dibyaranjan-portfolio-xi.vercel.app/">
 
-    <!-- Google Fonts -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dibyaranjan-portfolio-xi.vercel.app/">
+    <meta property="og:title" content="Dibyaranjan Nayak — AI/ML Engineer">
+    <meta property="og:description"
+        content="AI/ML student who learns by building real systems in Computer Vision, Multi-Agent Coordination, and Automation.">
+    <meta property="og:image" content="https://dibyaranjan-portfolio-xi.vercel.app/assets/images/profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dibyaranjan-portfolio-xi.vercel.app/">
+    <meta property="twitter:title" content="Dibyaranjan Nayak — AI/ML Engineer">
+    <meta property="twitter:description"
+        content="AI/ML student who learns by building real systems in Computer Vision, Multi-Agent Coordination, and Automation.">
+    <meta property="twitter:image" content="https://dibyaranjan-portfolio-xi.vercel.app/assets/images/profile.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+
+    <!-- Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Background Canvas -->
-    <canvas id="bg-canvas"></canvas>
+    <!-- Sticky Navigation -->
+    <header class="site-header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="brand" aria-label="Dibyaranjan Nayak Home">
+                <span class="brand-name">Dibyaranjan Nayak</span>
+                <span class="brand-role">[AI/ML]</span>
+            </a>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"></div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
 
-    <!-- Mobile-Only Landing Page -->
-    <section class="mobile-landing" id="mobile-home">
-        <div class="mobile-container">
-            <div class="mobile-profile reveal active">
-                <img src="./assets/images/profile.jpg" alt="Dibyaranjan Nayak">
-            </div>
-            <div class="mobile-content reveal active">
-                <p class="mobile-greeting">👋 Hello, I am</p>
-                <h1 class="mobile-name">Dibyaranjan <span class="gradient-text">Nayak</span></h1>
-                <p class="mobile-tagline">AI & Machine Learning Engineer</p>
-                <div class="mobile-quick-actions">
-                    <a href="#projects" class="mobile-action-btn"><i class="fas fa-code"></i> Projects</a>
-                    <a href="#contact" class="mobile-action-btn"><i class="fas fa-envelope"></i> Contact</a>
-                    <a href="#" class="mobile-action-btn"><i class="fas fa-file-alt"></i> Resume</a>
-                </div>
-                <div class="mobile-scroll-indicator">
-                    <span>Swipe to Explore</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Navigation -->
-    <header class="header">
-        <div class="logo">
-            <span class="logo-text">Dibyaranjan<span class="dot">.</span></span>
-        </div>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link desktop-only">Home</a></li>
-                <li><a href="#mobile-home" class="nav-link mobile-only">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
+            <nav class="nav-menu" id="primary-nav" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section (Desktop Only) -->
-    <section id="home" class="hero section desktop-only">
-        <div class="hero-bg"></div>
-        <div class="container hero-container">
-            <div class="hero-content reveal active">
-                <p class="subtitle">👋 Welcome to my world</p>
-                <h1 class="title">I'm Dibyaranjan <br><span class="gradient-text typewrite" data-period="2000"
-                        data-type='[ "AI & ML Engineer.", "AIML Student.", "AI Builder." ]'></span></h1>
-                <p class="description">
-                    Building Intelligent Systems, Smart AI Assistants, and Real-World AI Solutions.
-                    <br><br>
-                    <span class="hero-info"><i class="fas fa-graduation-cap"></i> B.Tech AIML Student</span><br>
-                    <span class="hero-info"><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India</span><br>
-                    <span class="hero-info"><i class="fas fa-lightbulb"></i> Passionate about AI, Automation & Future
-                        Tech</span>
-                </p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Download Resume</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper reveal delay-1">
-                <div class="hero-image-glow"></div>
-                <img src="./assets/images/profile.jpg" alt="Dibyaranjan Nayak" class="hero-image">
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>About <span class="gradient-text">Me</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text reveal">
-                    <h3>Passionate AI & ML Engineer</h3>
-                    <p>I am Dibyaranjan Nayak, a dedicated AI & Machine Learning student pursuing my B.Tech at GEC
-                        Autonomous College, Bhubaneswar (2024-2028).</p>
-                    <p>I specialize in <strong>Artificial Intelligence, Machine Learning, Computer Vision, and AI
-                            Automation</strong>. I have a deep passion for developing personal AI assistants and
-                        intelligent multi-agent systems.</p>
-
-                    <div class="specialization-list">
-                        <div class="spec-item"><i class="fas fa-check-circle"></i> Smart Face Attendance System</div>
-                        <div class="spec-item"><i class="fas fa-check-circle"></i> Personal AI Assistant</div>
-                        <div class="spec-item"><i class="fas fa-check-circle"></i> AI Multi-Agent Systems</div>
-                        <div class="spec-item"><i class="fas fa-check-circle"></i> AI Content Automation Tools</div>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-item">/ AI / ML</span>
+                        <span class="eyebrow-sep">&middot;</span>
+                        <span class="eyebrow-item">/ COMPUTER VISION</span>
+                        <span class="eyebrow-sep">&middot;</span>
+                        <span class="eyebrow-item">/ AGENTIC SYSTEMS</span>
                     </div>
 
-                    <p>My goal is to become a top-tier AI Engineer and build impactful AI products used globally. 🌍</p>
+                    <h1 class="hero-name">DIBYARANJAN NAYAK</h1>
+                    <p class="hero-title">AI/ML Engineer</p>
 
-                    <div class="stats-container">
-                        <div class="stat-box">
-                            <h4 class="stat-number">10+</h4>
-                            <p class="stat-text">AI Projects</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4 class="stat-number">2</h4>
-                            <p class="stat-text">Internships</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4 class="stat-number">2028</h4>
-                            <p class="stat-text">Graduation Year</p>
-                        </div>
+                    <blockquote class="hero-manifesto">
+                        "I build intelligent systems by turning ideas into working software."
+                    </blockquote>
+
+                    <p class="hero-summary">
+                        B.Tech AI &amp; Machine Learning student at GEC Autonomous College, Bhubaneswar (2024&ndash;2028).
+                        Focusing on practical machine learning, computer vision pipelines, multi-agent coordination,
+                        and intelligent automation systems.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <i class="fas fa-arrow-down" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/dibyax21" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/dibya-ranjan-nayak-8b4493300" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#resume-modal" class="btn btn-ghost" id="open-resume-btn">
+                            <i class="fas fa-file-lines" aria-hidden="true"></i>
+                            <span>Resume</span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section glass-bg">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>My <span class="gradient-text">Skills</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card reveal delay-1">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Programming</h3>
-                    <p>Python, JavaScript, HTML, CSS, SQL</p>
-                </div>
-                <div class="skill-card reveal delay-2">
-                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI & ML</h3>
-                    <p>Machine Learning, Deep Learning, Computer Vision, NLP, OpenCV, Face Recognition</p>
-                </div>
-                <div class="skill-card reveal delay-3">
-                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Tools & Tech</h3>
-                    <p>Git & GitHub, VS Code, Google Sheets API, REST API, TensorFlow & PyTorch (Learning)</p>
-                </div>
-                <div class="skill-card reveal delay-4">
-                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Web Development</h3>
-                    <p>Responsive Design, UI/UX Design, Animations</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Featured <span class="gradient-text">Projects</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="projects-marquee reveal">
-                <div class="projects-track">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="./assets/images/project_1.png" alt="AI Assistant" class="project-img">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="profile-frame">
+                            <img src="./assets/images/profile.jpg" alt="Dibyaranjan Nayak" class="profile-photo"
+                                width="340" height="340" loading="eager">
+                        </div>
+                        <div class="profile-meta">
+                            <div class="meta-row">
+                                <span class="meta-label">STATUS</span>
+                                <span class="meta-value"><span class="pulse-indicator" aria-hidden="true"></span>
+                                    Building &amp; Exploring</span>
                             </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">AI & Automation</span>
-                            <h3 class="project-title">Personal AI Assistant</h3>
-                            <p class="project-desc">Voice-controlled assistant with system control features.</p>
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>AI APIs</span>
+                            <div class="meta-row">
+                                <span class="meta-label">FOCUS</span>
+                                <span class="meta-value">Computer Vision &middot; Multi-Agent Systems</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="./assets/images/project_2.png" alt="Smart Face Attendance" class="project-img">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <div class="meta-row">
+                                <span class="meta-label">LOCATION</span>
+                                <span class="meta-value">Bhubaneswar, Odisha, India</span>
                             </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">Computer Vision</span>
-                            <h3 class="project-title">Smart Face Attendance</h3>
-                            <p class="project-desc">Real-time system using face recognition and Liveness detection.</p>
-                            <div class="project-tags">
-                                <span>OpenCV</span>
-                                <span>Python</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="./assets/images/project_3.jpg" alt="Multimedia Hub" class="project-img">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">Web Platform</span>
-                            <h3 class="project-title">Multimedia Hub</h3>
-                            <p class="project-desc">Comprehensive site with music/video players and auth.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>JS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <div class="project-placeholder bg-gradient-1"></div>
-                            <div class="project-overlay">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">Multi-Agent AI</span>
-                            <h3 class="project-title">AI Agent Developer</h3>
-                            <p class="project-desc">A team of AI agents designed to automate coding tasks.</p>
-                            <div class="project-tags">
-                                <span>LLMs</span>
-                                <span>Python</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Duplicate for infinite scroll loop -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="./assets/images/project_1.png" alt="AI Assistant" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">AI & Automation</span>
-                            <h3 class="project-title">Personal AI Assistant</h3>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="./assets/images/project_2.png" alt="Smart Face Attendance" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">Computer Vision</span>
-                            <h3 class="project-title">Smart Face Attendance</h3>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience & Education Section -->
-    <section id="experience" class="experience section glass-bg">
-        <div class="container">
-            <div class="experience-grid">
-                <!-- Internships -->
-                <div class="reveal">
-                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
-                        <h2>Internship <span class="gradient-text">Experience</span></h2>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>AI Intern — Acmegrade</h3>
-                                <p class="timeline-date">Feb 2025 — March 2025</p>
-                                <p>Focused on AI & ML concepts, building practical projects and learning real-world
-                                    implementation strategies.</p>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">01 / BACKGROUND</span>
+                    <h2 class="section-title">About Me</h2>
+                </header>
+
+                <div class="about-grid">
+                    <div class="about-prose">
+                        <p class="lead-text">
+                            I am a second-year B.Tech student in Artificial Intelligence &amp; Machine Learning at GEC
+                            Autonomous College, Bhubaneswar (2024&ndash;2028).
+                        </p>
+                        <p>
+                            My approach to AI is grounded in building. Rather than treating machine learning as purely
+                            theoretical models in notebooks, I focus on transforming algorithms into functional,
+                            testable software that solves actual problems.
+                        </p>
+                        <p>
+                            Right now, I spend most of my development hours exploring <strong>computer vision
+                                pipelines</strong> (facial analysis, liveness verification, visual tracking) and
+                            <strong>agentic architectures</strong> where autonomous agents coordinate to solve complex
+                            planning and development tasks.
+                        </p>
+                        <p>
+                            My long-term goal is to grow into a versatile AI/ML engineer who designs dependable,
+                            scalable systems&mdash;combining solid software fundamentals with cutting-edge ML models.
+                        </p>
+
+                        <div class="about-pillars">
+                            <div class="pillar-card">
+                                <div class="pillar-header">
+                                    <i class="fas fa-eye pillar-icon" aria-hidden="true"></i>
+                                    <h3>Computer Vision</h3>
+                                </div>
+                                <p>Building real-time detection, facial analysis, and liveness verification systems with
+                                    OpenCV and edge heuristics.</p>
+                            </div>
+
+                            <div class="pillar-card">
+                                <div class="pillar-header">
+                                    <i class="fas fa-network-wired pillar-icon" aria-hidden="true"></i>
+                                    <h3>Agentic &amp; Swarm AI</h3>
+                                </div>
+                                <p>Designing multi-agent workflows where specialized agents coordinate on code synthesis,
+                                    planning, and incident response.</p>
+                            </div>
+
+                            <div class="pillar-card">
+                                <div class="pillar-header">
+                                    <i class="fas fa-gears pillar-icon" aria-hidden="true"></i>
+                                    <h3>Intelligent Automation</h3>
+                                </div>
+                                <p>Connecting LLM APIs with desktop control, speech recognition, and system telemetry to
+                                    automate manual workflows.</p>
                             </div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>AI Intern — InternPe</h3>
-                                <p class="timeline-date">June 2025 — July 2025</p>
-                                <p>Worked on machine learning projects, data analysis, and predictive model development.
-                                </p>
+                    </div>
+
+                    <aside class="about-sidebar">
+                        <div class="sidebar-box">
+                            <h3 class="sidebar-title">Profile Snapshot</h3>
+                            <dl class="snapshot-list">
+                                <div class="snapshot-item">
+                                    <dt>Degree</dt>
+                                    <dd>B.Tech — AI &amp; Machine Learning</dd>
+                                </div>
+                                <div class="snapshot-item">
+                                    <dt>Institution</dt>
+                                    <dd>GEC Autonomous College, Bhubaneswar</dd>
+                                </div>
+                                <div class="snapshot-item">
+                                    <dt>Timeline</dt>
+                                    <dd>2024 &ndash; 2028</dd>
+                                </div>
+                                <div class="snapshot-item">
+                                    <dt>Core Stack</dt>
+                                    <dd>Python, OpenCV, Multi-Agent Systems, FastAPI, REST APIs</dd>
+                                </div>
+                                <div class="snapshot-item">
+                                    <dt>Languages</dt>
+                                    <dd>English, Hindi, Odia</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Centerpiece) -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">02 / ENGINEERING WORK</span>
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">
+                        Practical implementations spanning multimodal proctoring, multi-agent coordination, and computer
+                        vision systems.
+                    </p>
+                </header>
+
+                <!-- Featured Project: ExamGuard AI -->
+                <article class="featured-project" aria-labelledby="featured-title">
+                    <div class="featured-badge-bar">
+                        <span class="status-pill status-featured"><i class="fas fa-star" aria-hidden="true"></i>
+                            FEATURED PROJECT</span>
+                        <span class="category-pill">AI Proctoring / Multimodal AI</span>
+                    </div>
+
+                    <div class="featured-grid">
+                        <div class="featured-details">
+                            <h3 id="featured-title" class="featured-name">ExamGuard AI</h3>
+                            <p class="featured-summary">
+                                An automated examination platform focused on multimodal proctoring, evidence collection,
+                                human review, and scalable exam management.
+                            </p>
+
+                            <div class="engineering-breakdown">
+                                <div class="breakdown-block">
+                                    <h4 class="breakdown-heading"><span class="breakdown-tag">01</span> The Problem</h4>
+                                    <p class="breakdown-text">
+                                        Remote assessments struggle with integrity risks, while rigid automated systems
+                                        frequently produce high false positives and lack explainability. Educational
+                                        institutions need defensible evidence rather than black-box automated bans.
+                                    </p>
+                                </div>
+
+                                <div class="breakdown-block">
+                                    <h4 class="breakdown-heading"><span class="breakdown-tag">02</span> What I Built</h4>
+                                    <p class="breakdown-text">
+                                        Designed an exam supervision framework that combines video and audio telemetry to
+                                        flag suspicious behavioral cues (gaze deflection, absent student, multiple faces)
+                                        while leaving final verdicts strictly to human reviewers.
+                                    </p>
+                                </div>
+
+                                <div class="breakdown-block">
+                                    <h4 class="breakdown-heading"><span class="breakdown-tag">03</span> How It Works</h4>
+                                    <p class="breakdown-text">
+                                        Webcam video feeds are processed through lightweight computer vision detectors.
+                                        When anomaly thresholds are crossed, timestamped video frames and audit metadata
+                                        are logged into a structured incident queue for human-in-the-loop inspection.
+                                    </p>
+                                </div>
+
+                                <div class="breakdown-block">
+                                    <h4 class="breakdown-heading"><span class="breakdown-tag">04</span> My Role &amp; Status</h4>
+                                    <p class="breakdown-text">
+                                        Architected the end-to-end pipeline, vision signal thresholds, and evidence
+                                        packaging mechanism. Currently benchmarking signal reliability across diverse
+                                        lighting conditions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="tech-stack-row">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">Multimodal Telemetry</span>
+                                <span class="tech-tag">Human-in-the-Loop</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <button type="button" class="btn btn-primary open-project-modal"
+                                    data-project="examguard">
+                                    <i class="fas fa-layer-group" aria-hidden="true"></i>
+                                    <span>System Architecture Specs</span>
+                                </button>
+                                <a href="https://github.com/dibyax21" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-secondary">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                    <span>Repository Info</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="featured-media">
+                            <div class="media-frame">
+                                <img src="./assets/images/project_2.png"
+                                    alt="ExamGuard AI - Computer Vision Telemetry and Verification Pipeline"
+                                    class="featured-img" width="560" height="360" loading="lazy">
+                                <div class="media-caption">
+                                    <span>Signal Telemetry &amp; Evidence Queue Concept</span>
+                                    <span class="caption-tag">PROTOTYPE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Secondary Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 2: SAERN -->
+                    <article class="project-card" aria-labelledby="proj-saern-title">
+                        <div class="card-header">
+                            <span class="category-pill">AI / Emergency Response</span>
+                            <span class="status-pill status-active">Active</span>
+                        </div>
+                        <h3 id="proj-saern-title" class="card-title">SAERN</h3>
+                        <p class="card-subtitle">Swarm AI Emergency Response Network</p>
+                        <p class="card-desc">
+                            Swarm AI network designed around intelligent multi-agent coordination during emergency
+                            situations. Orchestrates simulated response units, analyzes incident feeds, and dynamically
+                            optimizes task assignment.
+                        </p>
+                        <div class="tech-stack-row">
+                            <span class="tech-tag">Multi-Agent Systems</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Hugging Face</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/dibyax21/SAERN" target="_blank" rel="noopener noreferrer"
+                                class="btn-card-link" aria-label="View SAERN repository on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <button type="button" class="btn-card-detail open-project-modal" data-project="saern">
+                                <span>Details</span>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Multi-Agent Developer Assistant -->
+                    <article class="project-card" aria-labelledby="proj-dev-title">
+                        <div class="card-header">
+                            <span class="category-pill">Agentic AI / Dev Tools</span>
+                            <span class="status-pill status-active">Live Prototype</span>
+                        </div>
+                        <h3 id="proj-dev-title" class="card-title">Multi-Agent Dev Assistant</h3>
+                        <p class="card-subtitle">Collaborative Ensemble for Software Engineering</p>
+                        <p class="card-desc">
+                            A multi-agent development assistant where specialized agents (Planner, Coder, Debugger)
+                            collaborate to break down prompt requests, write clean code, and review syntax and edge cases.
+                        </p>
+                        <div class="tech-stack-row">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">LLM APIs</span>
+                            <span class="tech-tag">Tailwind UI</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/dibyax21/multi-agent-dev-assistant-web" target="_blank"
+                                rel="noopener noreferrer" class="btn-card-link"
+                                aria-label="View Multi-Agent Dev Assistant repository on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <button type="button" class="btn-card-detail open-project-modal" data-project="devassistant">
+                                <span>Details</span>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Personal AI Assistant -->
+                    <article class="project-card" aria-labelledby="proj-assistant-title">
+                        <div class="card-header">
+                            <span class="category-pill">AI Assistant / Automation</span>
+                            <span class="status-pill status-built">Completed</span>
+                        </div>
+                        <h3 id="proj-assistant-title" class="card-title">Personal AI Assistant</h3>
+                        <p class="card-subtitle">Voice-Guided Desktop Automation</p>
+                        <p class="card-desc">
+                            A modular desktop assistant combining speech recognition, natural language query handling, and
+                            local operating system automation to execute desktop tasks, web search, and script controls.
+                        </p>
+                        <div class="tech-stack-row">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Speech Recognition</span>
+                            <span class="tech-tag">OS Automation</span>
+                            <span class="tech-tag">AI APIs</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/dibyax21" target="_blank" rel="noopener noreferrer"
+                                class="btn-card-link" aria-label="View Personal AI Assistant on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <button type="button" class="btn-card-detail open-project-modal" data-project="assistant">
+                                <span>Details</span>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Computer Vision Attendance System -->
+                    <article class="project-card" aria-labelledby="proj-cv-title">
+                        <div class="card-header">
+                            <span class="category-pill">Computer Vision</span>
+                            <span class="status-pill status-built">Completed</span>
+                        </div>
+                        <h3 id="proj-cv-title" class="card-title">CV Attendance System</h3>
+                        <p class="card-subtitle">Biometric Face Recognition with Liveness</p>
+                        <p class="card-desc">
+                            Real-time attendance tracking solution using face recognition and eye-blink / texture liveness
+                            heuristics to prevent spoofing, outputting automated logs for administrative records.
+                        </p>
+                        <div class="tech-stack-row">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Face Recognition</span>
+                            <span class="tech-tag">Liveness Detection</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/dibyax21" target="_blank" rel="noopener noreferrer"
+                                class="btn-card-link" aria-label="View CV Attendance System on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <button type="button" class="btn-card-detail open-project-modal" data-project="attendance">
+                                <span>Details</span>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">03 / CAREER &amp; ACADEMICS</span>
+                    <h2 class="section-title">Experience &amp; Education</h2>
+                </header>
+
+                <div class="experience-education-grid">
+                    <!-- Experience Column -->
+                    <div class="timeline-column">
+                        <h3 class="column-title"><i class="fas fa-briefcase" aria-hidden="true"></i> Practical Experience</h3>
+
+                        <div class="timeline-tree">
+                            <div class="timeline-node">
+                                <div class="node-marker" aria-hidden="true"></div>
+                                <div class="node-body">
+                                    <div class="node-header">
+                                        <h4 class="node-role">AI Intern &mdash; Training Programme</h4>
+                                        <span class="node-org">Odisha Computer Application Centre (OCAC) &middot; with OKCL</span>
+                                    </div>
+                                    <span class="node-period">May 07, 2026 &ndash; June 23, 2026 &middot; Bhubaneswar</span>
+                                    <p class="node-desc">
+                                        Completed the intensive Internship Training Programme on Artificial Intelligence (AI) conducted by OCAC with OKCL. Focused on machine learning workflows, data preparation, and applied AI systems.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-node">
+                                <div class="node-marker" aria-hidden="true"></div>
+                                <div class="node-body">
+                                    <div class="node-header">
+                                        <h4 class="node-role">AI Intern</h4>
+                                        <span class="node-org">Acmegrade</span>
+                                    </div>
+                                    <span class="node-period">Feb 2025 &ndash; Mar 2025</span>
+                                    <p class="node-desc">
+                                        Studied machine learning algorithms and implemented exploratory data pipelines.
+                                        Trained baseline regression and classification models in Python, focusing on
+                                        feature preprocessing and error evaluation.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-node">
+                                <div class="node-marker" aria-hidden="true"></div>
+                                <div class="node-body">
+                                    <div class="node-header">
+                                        <h4 class="node-role">AI Intern</h4>
+                                        <span class="node-org">InternPe</span>
+                                    </div>
+                                    <span class="node-period">June 2025 &ndash; July 2025</span>
+                                    <p class="node-desc">
+                                        Assisted with data preparation, pattern extraction, and model prototyping. Built
+                                        predictive workflows in Python for structured tabular datasets.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Column -->
+                    <div class="timeline-column">
+                        <h3 class="column-title"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+
+                        <div class="timeline-tree">
+                            <div class="timeline-node">
+                                <div class="node-marker" aria-hidden="true"></div>
+                                <div class="node-body">
+                                    <div class="node-header">
+                                        <h4 class="node-role">B.Tech in Artificial Intelligence &amp; Machine Learning</h4>
+                                        <span class="node-org">GEC Autonomous College, Bhubaneswar</span>
+                                    </div>
+                                    <span class="node-period">2024 &ndash; 2028</span>
+                                    <p class="node-desc">
+                                        Rigorous undergraduate engineering program in AI and Machine Learning.
+                                        Coursework emphasizes Data Structures &amp; Algorithms, Linear Algebra, Probability
+                                        &amp; Statistics, Machine Learning Foundations, Neural Networks, and Database Systems.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Education -->
-                <div class="reveal delay-2">
-                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
-                        <h2>My <span class="gradient-text">Education</span></h2>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>B.Tech — AI & Machine Learning</h3>
-                                <p class="timeline-date">2024 — 2028</p>
-                                <p><strong>GEC Autonomous College</strong>, Bhubaneswar. Deep diving into advanced AI
-                                    architectures and machine learning systems.</p>
-                            </div>
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">04 / TECHNICAL CAPABILITIES</span>
+                    <h2 class="section-title">Skills &amp; Tooling</h2>
+                    <p class="section-subtitle">
+                        Technologies actively used in my projects or currently under focused exploration.
+                    </p>
+                </header>
+
+                <div class="skills-category-grid">
+                    <!-- Group 1: AI / Machine Learning -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fas fa-brain category-icon" aria-hidden="true"></i>
+                            <h3 class="category-title">AI / Machine Learning</h3>
                         </div>
+                        <ul class="skill-tags-list">
+                            <li>Machine Learning</li>
+                            <li>Computer Vision</li>
+                            <li>NLP</li>
+                            <li>Deep Learning</li>
+                            <li>OpenCV</li>
+                        </ul>
                     </div>
 
-                    <div class="section-title" style="text-align: left; margin-top: 50px; margin-bottom: 30px;">
-                        <h2>Languages <span class="gradient-text">& Achievements</span></h2>
-                    </div>
-                    <div class="languages-achievements">
-                        <div class="lang-list">
-                            <span>English</span> <span>Hindi</span> <span>Odia</span>
+                    <!-- Group 2: Programming -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fas fa-code category-icon" aria-hidden="true"></i>
+                            <h3 class="category-title">Programming</h3>
                         </div>
-                        <ul class="achievement-list">
-                            <li><i class="fas fa-trophy"></i> Built Multiple AI Projects</li>
-                            <li><i class="fas fa-trophy"></i> Created Personal AI Assistant</li>
-                            <li><i class="fas fa-trophy"></i> Completed AI Internships</li>
+                        <ul class="skill-tags-list">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+
+                    <!-- Group 3: Tools & Development -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fas fa-screwdriver-wrench category-icon" aria-hidden="true"></i>
+                            <h3 class="category-title">Tools &amp; Development</h3>
+                        </div>
+                        <ul class="skill-tags-list">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>REST APIs</li>
+                            <li>Google APIs</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </div>
+
+                    <!-- Group 4: Currently Exploring -->
+                    <div class="skill-category-card highlight-exploration">
+                        <div class="category-header">
+                            <i class="fas fa-compass category-icon" aria-hidden="true"></i>
+                            <h3 class="category-title">Currently Exploring</h3>
+                        </div>
+                        <ul class="skill-tags-list">
+                            <li>LLMs</li>
+                            <li>Agentic AI</li>
+                            <li>AI Automation</li>
+                            <li>MLOps</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications section">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Certifications <span class="gradient-text">& Awards</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="certification-card reveal">
-                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                <div class="cert-info">
-                    <h3>Deloitte Data Analytics Virtual Experience</h3>
-                    <p class="cert-issuer">Issued by Deloitte</p>
-                    <p class="cert-desc">Mastered Data Analysis, Visualization, Telemetry Data Processing, and Business
-                        Intelligence Insights using Excel.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">05 / VERIFICATIONS</span>
+                    <h2 class="section-title">Certifications</h2>
+                </header>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section glass-bg">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Get In <span class="gradient-text">Touch</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="contact-container reveal">
-                <div class="contact-info">
-                    <h3>Let's build the future of AI together.</h3>
-                    <p>Open for collaborations, freelance AI projects, or interesting discussions about future
-                        technology.</p>
-
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <p>nayakdibyaranjan2006@gmail.com</p>
-                            </div>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon-col">
+                            <i class="fas fa-certificate cert-icon" aria-hidden="true"></i>
                         </div>
-                        <div class="contact-method">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div class="contact-text">
-                                <h4>Phone</h4>
-                                <p>+91 9692225288</p>
+                        <div class="cert-details">
+                            <h3 class="cert-title">Artificial Intelligence (AI) Internship Training Programme</h3>
+                            <p class="cert-issuer">Conducted by OCAC with OKCL &middot; Odisha Computer Application Centre</p>
+                            <p class="cert-summary">
+                                Completed certified training programme on Artificial Intelligence (AI) covering machine learning fundamentals, data preprocessing, and applied AI systems.
+                            </p>
+                            <div class="cert-meta">
+                                <span class="cert-tag"><i class="fas fa-check" aria-hidden="true"></i> Artificial Intelligence</span>
+                                <span class="cert-tag"><i class="fas fa-check" aria-hidden="true"></i> Machine Learning</span>
+                                <span class="cert-tag"><i class="fas fa-check" aria-hidden="true"></i> May 07, 2026 &ndash; June 23, 2026</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="social-links">
-                        <a href="https://github.com/dibyax21" target="_blank" class="social-link"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/dibya-ranjan-nayak-8b4493300" target="_blank"
-                            class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <div class="cert-card">
+                        <div class="cert-icon-col">
+                            <i class="fas fa-certificate cert-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="cert-details">
+                            <h3 class="cert-title">Deloitte Data Analytics Virtual Experience</h3>
+                            <p class="cert-issuer">Issued by Deloitte</p>
+                            <p class="cert-summary">
+                                Completed industry simulation covering data analytics fundamentals, telemetry data
+                                processing, business intelligence visualization, and dashboard synthesis in Excel.
+                            </p>
+                            <div class="cert-meta">
+                                <span class="cert-tag"><i class="fas fa-check" aria-hidden="true"></i> Data
+                                    Analysis</span>
+                                <span class="cert-tag"><i class="fas fa-check" aria-hidden="true"></i> Business
+                                    Insights</span>
+                                <span class="cert-tag"><i class="fas fa-check" aria-hidden="true"></i>
+                                    Visualization</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <form class="contact-form" action="https://formspree.io/f/xaqabzyn" method="POST">
-    
-    <div class="form-group">
-        <input type="text" name="name" id="name" placeholder="Your Name" required>
-    </div>
-
-    <div class="form-group">
-        <input type="email" name="email" id="email" placeholder="Your Email" required>
-    </div>
-
-    <div class="form-group">
-        <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
-    </div>
-
-    <button type="submit" class="btn btn-primary btn-block">
-        Send Message <i class="fas fa-paper-plane"></i>
-    </button>
-
-</form>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- GitHub / Open Source Section -->
+        <section class="section github-section">
+            <div class="container">
+                <div class="github-showcase">
+                    <div class="github-header">
+                        <div class="github-brand">
+                            <i class="fab fa-github github-icon" aria-hidden="true"></i>
+                            <div>
+                                <h2 class="github-title">Building in the Open</h2>
+                                <p class="github-handle">@dibyax21 on GitHub</p>
+                            </div>
+                        </div>
+                        <a href="https://github.com/dibyax21" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary">
+                            <span>Visit GitHub Profile</span>
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <p class="github-bio">
+                        I regularly push code, experiment with vision pipelines, and build agentic architectures. Most of
+                        my learning translates directly into publicly inspectable repositories.
+                    </p>
+
+                    <div class="github-repos-grid">
+                        <a href="https://github.com/dibyax21/SAERN" target="_blank" rel="noopener noreferrer"
+                            class="repo-item-card">
+                            <div class="repo-top">
+                                <i class="far fa-folder repo-folder-icon" aria-hidden="true"></i>
+                                <span class="repo-name">dibyax21 / SAERN</span>
+                            </div>
+                            <p class="repo-desc">Swarm AI Emergency Response Network for dynamic agent coordination.</p>
+                            <div class="repo-bottom">
+                                <span class="repo-lang"><span class="lang-dot python-dot" aria-hidden="true"></span>
+                                    Python</span>
+                                <span class="repo-link-action">Inspect <i class="fas fa-arrow-right"
+                                        aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/dibyax21/multi-agent-dev-assistant-web" target="_blank"
+                            rel="noopener noreferrer" class="repo-item-card">
+                            <div class="repo-top">
+                                <i class="far fa-folder repo-folder-icon" aria-hidden="true"></i>
+                                <span class="repo-name">dibyax21 / multi-agent-dev-assistant-web</span>
+                            </div>
+                            <p class="repo-desc">Collaborative ensemble of Planner, Coder, and Debugger agents.</p>
+                            <div class="repo-bottom">
+                                <span class="repo-lang"><span class="lang-dot python-dot" aria-hidden="true"></span>
+                                    Python / FastAPI</span>
+                                <span class="repo-link-action">Inspect <i class="fas fa-arrow-right"
+                                        aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">06 / GET IN TOUCH</span>
+                    <h2 class="section-title">Contact</h2>
+                </header>
+
+                <div class="contact-grid">
+                    <div class="contact-pitch">
+                        <h3 class="contact-cta-heading">
+                            Have an idea, project, or opportunity?<br>
+                            <span class="accent-text">Let's talk.</span>
+                        </h3>
+                        <p class="contact-subtext">
+                            I am open to internship opportunities, research collaborations, open-source projects, and
+                            discussions around AI and computer vision systems.
+                        </p>
+
+                        <div class="contact-channel-list">
+                            <a href="mailto:nayakdibyaranjan2006@gmail.com" class="channel-card">
+                                <div class="channel-icon-wrap">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <span class="channel-label">EMAIL</span>
+                                    <span class="channel-value">nayakdibyaranjan2006@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com/in/dibya-ranjan-nayak-8b4493300" target="_blank"
+                                rel="noopener noreferrer" class="channel-card">
+                                <div class="channel-icon-wrap">
+                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <span class="channel-label">LINKEDIN</span>
+                                    <span class="channel-value">linkedin.com/in/dibya-ranjan-nayak-8b4493300</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/dibyax21" target="_blank" rel="noopener noreferrer"
+                                class="channel-card">
+                                <div class="channel-icon-wrap">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <span class="channel-label">GITHUB</span>
+                                    <span class="channel-value">github.com/dibyax21</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap">
+                        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xaqabzyn"
+                            method="POST">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" name="name" id="name" class="form-input" placeholder="e.g. Jane Doe"
+                                    required autocomplete="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" name="email" id="email" class="form-input"
+                                    placeholder="e.g. jane@example.com" required autocomplete="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea name="message" id="message" rows="5" class="form-textarea"
+                                    placeholder="Write your note or project details here..." required></textarea>
+                            </div>
+
+                            <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container footer-container">
-            <div class="footer-logo">
-                <span class="logo-text">Dibyaranjan<span class="dot">.</span></span>
+            <div class="footer-left">
+                <span class="footer-brand">Dibyaranjan Nayak</span>
+                <span class="footer-sub">B.Tech AI &amp; Machine Learning &middot; 2024&ndash;2028</span>
             </div>
-            <p class="copyright">&copy; 2026 Dibyaranjan Nayak. All rights reserved.</p>
+            <div class="footer-right">
+                <a href="#home" class="footer-back-to-top">
+                    <span>Back to top</span>
+                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
+    <!-- Interactive Project Details Modal -->
+    <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title"
+        hidden>
+        <div class="modal-box">
+            <button class="modal-close-btn" id="modal-close" aria-label="Close project details modal">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+            <div class="modal-header">
+                <span class="category-pill" id="modal-category">Category</span>
+                <h3 class="modal-title" id="modal-project-title">Project Name</h3>
+            </div>
+            <div class="modal-content" id="modal-body">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Action Modal -->
+    <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="modal-resume-title"
+        hidden>
+        <div class="modal-box">
+            <button class="modal-close-btn" id="resume-modal-close" aria-label="Close resume modal">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+            <div class="modal-header">
+                <span class="category-pill">CURRICULUM VITAE</span>
+                <h3 class="modal-title" id="modal-resume-title">Resume / CV</h3>
+            </div>
+            <div class="modal-content">
+                <p>
+                    I keep an updated resume with academic transcripts, coursework details, and ongoing AI/ML engineering
+                    projects.
+                </p>
+                <div class="resume-contact-actions">
+                    <a href="mailto:nayakdibyaranjan2006@gmail.com?subject=Resume%20Request%20-%20Dibyaranjan%20Nayak"
+                        class="btn btn-primary">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>Request Latest Resume via Email</span>
+                    </a>
+                    <a href="https://linkedin.com/in/dibya-ranjan-nayak-8b4493300" target="_blank"
+                        rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>View LinkedIn Profile</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="./js/script.js"></script>
-    
-    <!-- Firebase SDKs -->
+
+    <!-- Firebase Analytics (preserved safely) -->
     <script type="module">
-        // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
-        
-        // Your web app's Firebase configuration
+
         const firebaseConfig = {
             apiKey: "AIzaSyAEbERfjZyBQx7zjUzemcySesvWOJBITns",
             authDomain: "dibyaranjan-nayak-portfolio.firebaseapp.com",
@@ -471,10 +919,12 @@
             measurementId: "G-2XJ0Y1MWN0"
         };
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        console.log("Firebase initialized successfully!");
+        try {
+            const app = initializeApp(firebaseConfig);
+            getAnalytics(app);
+        } catch (e) {
+            // Graceful handling for local offline dev
+        }
     </script>
 </body>
 

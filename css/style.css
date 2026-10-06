@@ -4,41 +4,47 @@
  */
 
 :root {
-    /* Foundation: Warm Dark Graphite Palette */
-    --bg-base: #0b0d12;
-    --bg-surface: #10141d;
-    --bg-card: #151a26;
-    --bg-card-hover: #1b2130;
-    --bg-subtle: #1e2536;
+    /* Foundation: Deep Midnight Cosmic Navy (from reference) */
+    --bg-base: #000319;
+    --bg-surface: #04071d;
+    --bg-card: #0c102b;
+    --bg-card-hover: #13183d;
+    --bg-subtle: #10132e;
 
     /* Technical Borders */
-    --border-subtle: rgba(255, 255, 255, 0.07);
-    --border-card: rgba(255, 255, 255, 0.11);
-    --border-strong: rgba(255, 255, 255, 0.18);
-    --border-accent: rgba(56, 189, 248, 0.35);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-card: rgba(255, 255, 255, 0.12);
+    --border-strong: rgba(203, 172, 249, 0.35);
+    --border-accent: rgba(203, 172, 249, 0.5);
 
-    /* Typography Palette */
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-muted: #8896aa;
-    --text-faint: #475569;
+    /* Typography Palette (from reference) */
+    --text-primary: #ffffff;
+    --text-secondary: #c1c2d3;
+    --text-muted: #8c90b3;
+    --text-faint: #53597d;
 
-    /* Restrained Accent: Steel Cyan / Sky */
-    --accent: #38bdf8;
-    --accent-hover: #7dd3fc;
-    --accent-faint: rgba(56, 189, 248, 0.08);
-    --accent-subtle: rgba(56, 189, 248, 0.15);
+    /* Signature Aceternity/Next.js Radiant Lavender & Violet Accent */
+    --accent: #cbacf9;
+    --accent-hover: #e2d1fc;
+    --accent-faint: rgba(203, 172, 249, 0.08);
+    --accent-subtle: rgba(203, 172, 249, 0.16);
+    --accent-glow: 0 0 25px rgba(203, 172, 249, 0.3);
+
+    /* Atmospheric Glows & Spotlights */
+    --glow-indigo: rgba(99, 102, 241, 0.24);
+    --glow-purple: rgba(168, 85, 247, 0.18);
+    --glow-cyan: rgba(56, 189, 248, 0.14);
 
     /* Fonts */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-    /* Spacing & Radii (Crisp & tactile) */
+    /* Spacing & Radii */
     --container-max: 1140px;
     --header-height: 68px;
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
     --radius-full: 9999px;
 
     /* Transitions */
@@ -71,12 +77,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     position: relative;
-    /* Subtle blueprint texture */
+    /* Cosmic Spotlight + Fine Precision Grid Matrix (from reference) */
     background-image: 
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.06), transparent 45%),
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 100% 100%, 44px 44px, 44px 44px;
+        radial-gradient(ellipse 75% 45% at 12% 8%, rgba(99, 102, 241, 0.24), transparent 60%),
+        radial-gradient(circle at 88% 12%, rgba(168, 85, 247, 0.16), transparent 50%),
+        radial-gradient(ellipse 55% 30% at 50% -5%, rgba(203, 172, 249, 0.12), transparent 65%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.042) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.042) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
 }
 
 /* Interactive Neural Mesh Background Canvas */
@@ -186,35 +194,39 @@ button {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 20px;
+    padding: 10px 22px;
     font-size: 0.9375rem;
     font-weight: 500;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     transition: all var(--transition-normal);
     white-space: nowrap;
 }
 
 .btn-primary {
-    background: var(--text-primary);
-    color: var(--bg-base);
-    border: 1px solid var(--text-primary);
+    background: #04071d;
+    color: #ffffff;
+    border: 1px solid rgba(203, 172, 249, 0.45);
+    box-shadow: 0 0 20px rgba(203, 172, 249, 0.16);
 }
 
 .btn-primary:hover {
-    background: #ffffff;
-    box-shadow: 0 2px 14px rgba(255, 255, 255, 0.15);
-    transform: translateY(-1px);
+    background: rgba(16, 21, 46, 0.95);
+    border-color: var(--accent);
+    box-shadow: 0 0 30px rgba(203, 172, 249, 0.42);
+    color: var(--accent);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: var(--bg-surface);
-    color: var(--text-primary);
+    background: rgba(12, 16, 43, 0.65);
+    color: var(--text-secondary);
     border: 1px solid var(--border-card);
 }
 
 .btn-secondary:hover {
     background: var(--bg-card);
-    border-color: var(--border-strong);
+    border-color: rgba(203, 172, 249, 0.35);
+    color: var(--text-primary);
     transform: translateY(-1px);
 }
 
@@ -225,37 +237,42 @@ button {
 }
 
 .btn-ghost:hover {
-    color: var(--text-primary);
-    border-color: var(--border-card);
-    background: var(--bg-surface);
+    color: var(--accent);
+    border-color: rgba(203, 172, 249, 0.35);
+    background: rgba(203, 172, 249, 0.06);
+    transform: translateY(-1px);
 }
 
-/* Site Header */
+/* Site Header — Floating Cosmic Glass Capsule (from reference) */
 .site-header {
     position: sticky;
-    top: 0;
+    top: 14px;
     width: 100%;
-    height: var(--header-height);
-    background: rgba(11, 13, 18, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-subtle);
     z-index: 1000;
-    transition: border-color var(--transition-fast);
-}
-
-.site-header.scrolled {
-    border-color: var(--border-card);
+    padding: 0 1rem;
+    transition: all var(--transition-normal);
 }
 
 .nav-container {
     max-width: var(--container-max);
-    height: 100%;
+    height: 54px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: rgba(4, 7, 29, 0.78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: var(--radius-full);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    transition: all var(--transition-fast);
+}
+
+.site-header.scrolled .nav-container {
+    border-color: rgba(203, 172, 249, 0.35);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 20px rgba(203, 172, 249, 0.12);
 }
 
 .brand {
@@ -263,7 +280,7 @@ button {
     align-items: center;
     gap: 10px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-primary);
     letter-spacing: -0.01em;
 }
@@ -274,9 +291,9 @@ button {
     justify-content: center;
     width: 28px;
     height: 28px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-card);
-    border-radius: var(--radius-sm);
+    background: rgba(203, 172, 249, 0.12);
+    border: 1px solid rgba(203, 172, 249, 0.35);
+    border-radius: var(--radius-full);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 700;
@@ -292,23 +309,23 @@ button {
 
 .nav-link {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px 14px;
     font-size: 0.875rem;
     font-weight: 400;
-    color: var(--text-muted);
-    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    border-radius: var(--radius-full);
     transition: all var(--transition-fast);
 }
 
 .nav-link:hover {
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(203, 172, 249, 0.1);
 }
 
 .nav-link.active {
-    color: var(--text-primary);
+    color: var(--accent);
     font-weight: 500;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(203, 172, 249, 0.14);
 }
 
 .nav-toggle {
@@ -345,49 +362,63 @@ button {
     align-items: center;
 }
 
+.hero-kicker {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #e4ecff;
+    margin-bottom: 14px;
+    opacity: 0.92;
+}
+
 .hero-status-pill {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 12px;
-    background: var(--bg-surface);
+    padding: 5px 14px;
+    background: rgba(12, 16, 43, 0.75);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-full);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .pulse-dot {
     width: 7px;
     height: 7px;
-    background: #10b981;
+    background: var(--accent);
     border-radius: 50%;
-    box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
+    box-shadow: 0 0 10px rgba(203, 172, 249, 0.85);
     display: inline-block;
 }
 
 .hero-greeting {
-    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    font-size: clamp(2.4rem, 4.4vw, 3.8rem);
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.12;
     color: var(--text-primary);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
+.highlight-accent,
+.text-accent,
 .highlight-name {
-    color: var(--text-primary);
-    position: relative;
+    color: var(--accent);
+    text-shadow: 0 0 24px rgba(203, 172, 249, 0.38);
 }
 
 .hero-role-title {
-    font-size: 1.15rem;
+    font-size: 1.125rem;
     font-weight: 500;
-    color: var(--accent);
+    color: #e4ecff;
     font-family: var(--font-mono);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .hero-bio {
@@ -409,12 +440,18 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 5px 10px;
-    background: var(--bg-surface);
+    padding: 5px 12px;
+    background: rgba(12, 16, 43, 0.65);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-sm);
     font-size: 0.8125rem;
     color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.fact-chip:hover {
+    border-color: rgba(203, 172, 249, 0.3);
+    color: var(--text-primary);
 }
 
 .chip-icon {
@@ -509,17 +546,18 @@ button {
 
 /* FEATURED PROJECT: EXAMGUARD AI */
 .featured-project-card {
-    background: var(--bg-surface);
+    background: var(--bg-card);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-lg);
     padding: 36px;
     margin-bottom: 48px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-    transition: border-color var(--transition-normal);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+    transition: all var(--transition-normal);
 }
 
 .featured-project-card:hover {
     border-color: var(--border-accent);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.65), 0 0 24px rgba(203, 172, 249, 0.1);
 }
 
 .project-flag-bar {
@@ -537,7 +575,7 @@ button {
     padding: 4px 10px;
     background: var(--accent-subtle);
     color: var(--accent);
-    border: 1px solid rgba(56, 189, 248, 0.3);
+    border: 1px solid rgba(203, 172, 249, 0.35);
     border-radius: var(--radius-full);
     font-family: var(--font-mono);
     font-size: 0.75rem;
@@ -549,7 +587,7 @@ button {
     font-size: 0.75rem;
     color: var(--text-muted);
     padding: 4px 10px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-full);
 }
@@ -587,7 +625,7 @@ button {
 }
 
 .philosophy-box {
-    background: var(--bg-card);
+    background: rgba(4, 7, 29, 0.75);
     border-left: 3px solid var(--accent);
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     padding: 14px 18px;
@@ -713,7 +751,7 @@ button {
 }
 
 .project-tile {
-    background: var(--bg-surface);
+    background: var(--bg-card);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-md);
     padding: 26px;
@@ -723,9 +761,10 @@ button {
 }
 
 .project-tile:hover {
-    border-color: var(--border-accent);
-    background: var(--bg-card);
-    transform: translateY(-2px);
+    border-color: rgba(203, 172, 249, 0.45);
+    background: var(--bg-card-hover);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(203, 172, 249, 0.08);
+    transform: translateY(-3px);
 }
 
 .tile-header {
@@ -978,7 +1017,7 @@ button {
 }
 
 .skill-group-card {
-    background: var(--bg-surface);
+    background: var(--bg-card);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-md);
     padding: 22px;
@@ -988,13 +1027,14 @@ button {
 }
 
 .skill-group-card:hover {
-    border-color: var(--border-strong);
-    background: var(--bg-card);
+    border-color: rgba(203, 172, 249, 0.4);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
 }
 
 .skill-group-card.highlight-group {
-    border-color: rgba(56, 189, 248, 0.3);
-    background: rgba(56, 189, 248, 0.02);
+    border-color: rgba(203, 172, 249, 0.38);
+    background: rgba(203, 172, 249, 0.04);
 }
 
 .group-header {
@@ -1074,15 +1114,17 @@ button {
 }
 
 .timeline-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
     padding: 20px;
-    transition: border-color var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 .timeline-card:hover {
-    border-color: var(--border-card);
+    border-color: rgba(203, 172, 249, 0.4);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
 }
 
 .timeline-badge-row {
@@ -1127,7 +1169,7 @@ button {
 }
 
 .now-tile {
-    background: var(--bg-surface);
+    background: var(--bg-card);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-md);
     padding: 22px;
@@ -1138,8 +1180,9 @@ button {
 }
 
 .now-tile:hover {
-    border-color: var(--border-strong);
-    background: var(--bg-card);
+    border-color: rgba(203, 172, 249, 0.4);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
 }
 
 .now-pill {
@@ -1150,7 +1193,7 @@ button {
     color: var(--accent);
     padding: 2px 8px;
     background: var(--accent-faint);
-    border: 1px solid rgba(56, 189, 248, 0.25);
+    border: 1px solid rgba(203, 172, 249, 0.3);
     border-radius: var(--radius-sm);
     letter-spacing: 0.06em;
 }
@@ -1324,9 +1367,9 @@ button {
 }
 
 .contact-channel-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
     padding: 14px 16px;
     display: flex;
     align-items: center;
@@ -1335,17 +1378,17 @@ button {
 }
 
 .contact-channel-card:hover {
-    border-color: var(--border-card);
-    background: var(--bg-card);
+    border-color: rgba(203, 172, 249, 0.4);
+    background: var(--bg-card-hover);
     transform: translateX(3px);
 }
 
 .channel-icon-wrap {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border-radius: var(--radius-sm);
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
+    background: rgba(203, 172, 249, 0.1);
+    border: 1px solid rgba(203, 172, 249, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1375,13 +1418,14 @@ button {
 
 /* Contact Form */
 .clean-contact-form {
-    background: var(--bg-surface);
+    background: var(--bg-card);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-md);
     padding: 28px;
     display: flex;
     flex-direction: column;
     gap: 18px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
 .field-item {
@@ -1400,21 +1444,22 @@ button {
 .field-input,
 .field-textarea {
     width: 100%;
-    background: var(--bg-card);
+    background: rgba(4, 7, 29, 0.65);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-sm);
     padding: 11px 13px;
     font-family: var(--font-sans);
     font-size: 0.9375rem;
     color: var(--text-primary);
-    transition: border-color var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 .field-input:focus,
 .field-textarea:focus {
     outline: none;
     border-color: var(--accent);
-    background: var(--bg-subtle);
+    box-shadow: 0 0 16px rgba(203, 172, 249, 0.25);
+    background: rgba(4, 7, 29, 0.9);
 }
 
 .field-textarea {

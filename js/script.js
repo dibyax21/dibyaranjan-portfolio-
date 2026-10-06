@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.vx = (Math.random() - 0.5) * 0.35;
                 this.vy = (Math.random() - 0.5) * 0.35;
                 this.radius = Math.random() * 2 + 1;
-                // Dual tone: accent cyan & purple
-                this.color = Math.random() > 0.4 ? 'rgba(56, 189, 248, ' : 'rgba(124, 58, 237, ';
+                // Dual tone: Aceternity radiant lavender (#cbacf9) & soft cosmic indigo (#818cf8)
+                this.color = Math.random() > 0.45 ? 'rgba(203, 172, 249, ' : 'rgba(129, 140, 248, ';
             }
 
             update() {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     if (dist < maxDistance) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(124, 58, 237, ${0.16 * (1 - dist / maxDistance)})`;
+                        ctx.strokeStyle = `rgba(203, 172, 249, ${0.15 * (1 - dist / maxDistance)})`;
                         ctx.lineWidth = 0.65;
                         ctx.moveTo(nodes[i].x, nodes[i].y);
                         ctx.lineTo(nodes[j].x, nodes[j].y);

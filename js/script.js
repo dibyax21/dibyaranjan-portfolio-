@@ -4,6 +4,106 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Interactive Neural Mesh Background Canvas (Restored from previous version)
+    const canvas = document.getElementById('bg-canvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let nodes = [];
+        const isMobile = window.innerWidth < 768;
+        const nodeCount = isMobile ? 32 : 60;
+        const maxDistance = 160;
+        let mouse = { x: null, y: null };
+
+        const resize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+        window.addEventListener('resize', resize, { passive: true });
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        }, { passive: true });
+        window.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+        resize();
+
+        class Node {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.35;
+                this.vy = (Math.random() - 0.5) * 0.35;
+                this.radius = Math.random() * 2 + 1;
+                // Dual tone: accent cyan & purple
+                this.color = Math.random() > 0.4 ? 'rgba(56, 189, 248, ' : 'rgba(124, 58, 237, ';
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+                // Mouse interaction (gentle repel)
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = this.x - mouse.x;
+                    const dy = this.y - mouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 130 && dist > 0) {
+                        const force = (130 - dist) / 130;
+                        this.x += (dx / dist) * force * 1.8;
+                        this.y += (dy / dist) * force * 1.8;
+                    }
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `${this.color}0.5)`;
+                ctx.fill();
+            }
+        }
+
+        const init = () => {
+            nodes = [];
+            for (let i = 0; i < nodeCount; i++) {
+                nodes.push(new Node());
+            }
+        };
+
+        const draw = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < nodes.length; i++) {
+                nodes[i].update();
+                nodes[i].draw();
+
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const dx = nodes[i].x - nodes[j].x;
+                    const dy = nodes[i].y - nodes[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < maxDistance) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(124, 58, 237, ${0.16 * (1 - dist / maxDistance)})`;
+                        ctx.lineWidth = 0.65;
+                        ctx.moveTo(nodes[i].x, nodes[i].y);
+                        ctx.lineTo(nodes[j].x, nodes[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(draw);
+        };
+
+        init();
+        draw();
+    }
+
     // 1. Mobile Navigation Drawer
     const navToggle = document.getElementById('nav-toggle');
     const primaryNav = document.getElementById('primary-nav');
